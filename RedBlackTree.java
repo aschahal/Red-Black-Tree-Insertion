@@ -1,27 +1,12 @@
-//////////////// FILE HEADER (INCLUDE IN EVERY FILE) //////////////////////////
-//
-// Title: P02 Insertion
-// Course: CS 400 Summer 2023
-//
-// Author: Amandeep Chahal
-// Email: aschahal@wisc.edu
-// Lecturer: Peyman Morteza
-//
-///////////////////////// ALWAYS CREDIT OUTSIDE HELP //////////////////////////
-//
-// Persons:
-// Online Sources: (identify each by URL and describe how it helped)
-//
-///////////////////////////////////////////////////////////////////////////////
 import java.util.LinkedList;
 import java.util.Stack;
 import org.junit.Test;
 import static org.junit.Assert.*;
 /**
  * Red-Black Tree implementation with a Node inner class for representing
- * the nodes of the tree. Currently, this implements a Binary Search Tree that
- * we will turn into a red black tree by modifying the insert functionality.
- * In this activity, we will start with implementing rotations for the binary
+ * the nodes of the tree. Implements a Binary Search Tree that
+ * will turn into a red black tree by modifying the insert functionality.
+ * Start with implementing rotations for the binary
  * search tree insert algorithm.
  */
 public class RedBlackTree<T extends Comparable<T>> implements SortedCollectionInterface<T> {
@@ -36,9 +21,7 @@ public class RedBlackTree<T extends Comparable<T>> implements SortedCollectionIn
         // - context[1] is the left child reference of the node,
         // - context[2] is the right child reference of the node.
         // The @SupressWarning("unchecked") annotation is used to supress an unchecked
-        // cast warning. Java only allows us to instantiate arrays without generic
-        // type parameters, so we use this cast here to avoid future casts of the
-        // node type's data field.
+        // cast warning. 
         @SuppressWarnings("unchecked")
         public Node<T>[] context = (Node<T>[])new Node[3];
         public Node(T data) {
@@ -423,8 +406,7 @@ public class RedBlackTree<T extends Comparable<T>> implements SortedCollectionIn
     /**
      * This method performs an inorder traversal of the tree. The string
      * representations of each data value within this tree are assembled into a
-     * comma separated string within brackets (similar to many implementations
-     * of java.util.Collection, like java.util.ArrayList, LinkedList, etc).
+     * comma separated string within brackets 
      * @return string containing the ordered values of this tree (in-order traversal)
      */
     public String toInOrderString() {
@@ -455,9 +437,9 @@ public class RedBlackTree<T extends Comparable<T>> implements SortedCollectionIn
      * This method performs a level order traversal of the tree. The string
      * representations of each data value
      * within this tree are assembled into a comma separated string within
-     * brackets (similar to many implementations of java.util.Collection).
+     * brackets.
      * This method will be helpful as a helper for the debugging and testing
-     * of your rotation implementation.
+     * rotation implementation.
      * @return string containing the values of this tree in level order
      */
     public String toLevelOrderString() {
